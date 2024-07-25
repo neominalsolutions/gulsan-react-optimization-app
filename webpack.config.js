@@ -23,13 +23,14 @@ module.exports = {
 				use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader'],
 			},
 			{
-				test: /\.(woff|woff2|eot|ttf|svg)$/,
-				use: {
-					loader: 'url-loader',
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+				type: 'asset/resource',
+				generator: {
+					filename: './fonts/[name][ext]',
 				},
 			},
 			{
-				test: /\.(png|jpe?g|gif)$/i,
+				test: /\.(ico|jpe?g|png|gif|webp|svg|mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/,
 				use: [
 					{
 						loader: 'file-loader',

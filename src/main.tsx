@@ -7,6 +7,8 @@ import './index.scss';
 import CssModuleDemo from './components/css-modules/css-module.demo';
 import { Link, Outlet } from 'react-router-dom';
 
+// https://primereact.org/tailwind/#csslayer
+
 function App() {
 	return (
 		<>
@@ -26,6 +28,10 @@ function App() {
 
 					<Link className="underline text-blue-500 mb-2 mx-2" to="/usecallback">
 						Use Callback
+					</Link>
+
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/prime-demo">
+						Prime Demo
 					</Link>
 				</nav>
 			</header>
