@@ -4,6 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	entry: './src/index.tsx',
 	mode: 'development',
+	devServer: {
+		historyApiFallback: true,
+	},
 	output: {
 		filename: 'index.js',
 		path: path.resolve(__dirname, 'dist'),
