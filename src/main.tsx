@@ -17,8 +17,15 @@ function App() {
 
 			<header className="h-6">
 				<nav>
-					<Link className="underline text-blue-500" to="/react-memo">
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/react-memo">
 						React Memo
+					</Link>
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/usememo">
+						Use Memo
+					</Link>
+
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/usecallback">
+						Use Callback
 					</Link>
 				</nav>
 			</header>
