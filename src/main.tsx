@@ -53,11 +53,12 @@ function App() {
 						UseFetch Demo
 					</Link>
 
-					<Link
-						className="underline text-blue-500 mb-2 mx-2"
-						to="/swr-demo"
-					>
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/swr-demo">
 						USE SWR Demo
+					</Link>
+
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/debouncing">
+						ServerSide Searching
 					</Link>
 				</nav>
 			</header>

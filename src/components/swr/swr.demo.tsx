@@ -16,6 +16,8 @@ function SwrDemo() {
 	// toplam kayıt sayısını buradan buluyoruz
 	const { isLoading, data, error } = useSWR('/Products', fetcher, {
 		errorRetryCount: 3,
+		revalidateOnFocus: false, // tab değişikliklerinde yada oturumu açık bırakıp gitiğimizde arayüze foculandığımız olur. default true.
+		revalidateOnReconnect: false, // internet koparsa yeni internet yüklendiğinde cacheden mi okusun yoksa yeniden veriyi apiden mi çeksin default true
 	});
 
 	const pagedResult = useSWR(
@@ -23,6 +25,8 @@ function SwrDemo() {
 		fetcher,
 		{
 			errorRetryCount: 3,
+			revalidateOnFocus: false, // tab değişikliklerinde yada oturumu açık bırakıp gitiğimizde arayüze foculandığımız olur.
+			revalidateOnReconnect: false,
 		}
 	);
 
@@ -35,7 +39,8 @@ function SwrDemo() {
 	if (pagedResult.data) {
 		return (
 			<>
-				<DataTable value={pagedResult.data} tableStyle={{ minWidth: '50rem' }}>
+				<div>Yüklenen: {pagedResult.data.length}</div>
+				{/* <DataTable value={pagedResult.data} tableStyle={{ minWidth: '50rem' }}>
 					<Column field="ProductName" header="ProductName"></Column>
 					<Column field="UnitPrice" header="UnitPrice"></Column>
 				</DataTable>
@@ -44,7 +49,7 @@ function SwrDemo() {
 					rows={pageSize}
 					totalRecords={data?.length}
 					onPageChange={onPageChange}
-				/>
+				/> */}
 				<p className="text-right">Toplam Kayıt Sayıs: {data?.length}</p>
 			</>
 		);
