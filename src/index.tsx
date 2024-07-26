@@ -14,6 +14,8 @@ import UseRefDemo from './components/useref/useref.demo';
 import UseImperativeDemo from './components/useimperative/useimprative.demo';
 import UseImperativeDemoV2 from './components/useimperative/useimprative.demo.v2';
 import CustomHookDemo from './components/customhook/custom.hook.demo';
+import UseFetchHookDemo from './components/customhook/useFetch.hook.demo';
+import SwrDemo from './components/swr/swr.demo';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
 			{
 				path: 'custom-hook',
 				Component: CustomHookDemo,
+			},
+			{
+				path: 'usefetch-demo',
+				Component: UseFetchHookDemo,
+			},
+			{
+				path: 'swr-demo',
+				Component: SwrDemo,
 			},
 		],
 	},

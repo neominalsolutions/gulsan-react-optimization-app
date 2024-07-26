@@ -46,6 +46,19 @@ function App() {
 					<Link className="underline text-blue-500 mb-2 mx-2" to="/custom-hook">
 						Custom Hook
 					</Link>
+					<Link
+						className="underline text-blue-500 mb-2 mx-2"
+						to="/usefetch-demo"
+					>
+						UseFetch Demo
+					</Link>
+
+					<Link
+						className="underline text-blue-500 mb-2 mx-2"
+						to="/swr-demo"
+					>
+						USE SWR Demo
+					</Link>
 				</nav>
 			</header>
 			<main className="p-5">
