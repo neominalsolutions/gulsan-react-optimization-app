@@ -20,8 +20,11 @@ function PrimeDemo() {
 
 	return (
 		<>
-			<Menu model={items} />
-			<Button onClick={click} label="Submit" />
+			<div className="text-center">
+				<p>Ortalı Yazı</p>
+				<Menu className="mb-2" model={items} />
+				<Button className="text-lg" onClick={click} label="Submit" />
+			</div>
 		</>
 	);
 }
