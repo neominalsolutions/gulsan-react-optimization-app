@@ -17,6 +17,7 @@ import CustomHookDemo from './components/customhook/custom.hook.demo';
 import UseFetchHookDemo from './components/customhook/useFetch.hook.demo';
 import SwrDemo from './components/swr/swr.demo';
 import DebouncingDemo from './components/debouncing/debouncing.demo';
+import VirtualizeListDemo from './components/virtualized-list/virtualizedlist.demo';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
 			{
 				path: 'debouncing',
 				Component: DebouncingDemo,
+			},
+			{
+				path: 'virtualizedlist',
+				Component: VirtualizeListDemo,
 			},
 		],
 	},

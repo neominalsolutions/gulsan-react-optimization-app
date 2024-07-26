@@ -60,6 +60,10 @@ function App() {
 					<Link className="underline text-blue-500 mb-2 mx-2" to="/debouncing">
 						ServerSide Searching
 					</Link>
+
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/virtualizedlist">
+						Virtualized List
+					</Link>
 				</nav>
 			</header>
 			<main className="p-5">
