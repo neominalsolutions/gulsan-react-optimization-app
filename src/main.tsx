@@ -25,13 +25,26 @@ function App() {
 					<Link className="underline text-blue-500 mb-2 mx-2" to="/usememo">
 						Use Memo
 					</Link>
-
 					<Link className="underline text-blue-500 mb-2 mx-2" to="/usecallback">
 						Use Callback
 					</Link>
-
 					<Link className="underline text-blue-500 mb-2 mx-2" to="/prime-demo">
 						Prime Demo
+					</Link>
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/useref">
+						UseRef Demo
+					</Link>
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/imperative">
+						Imperative Demo
+					</Link>
+					<Link
+						className="underline text-blue-500 mb-2 mx-2"
+						to="/imperativev2"
+					>
+						Imperative Demo V2
+					</Link>
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/custom-hook">
+						Custom Hook
 					</Link>
 				</nav>
 			</header>

@@ -10,6 +10,10 @@ import UseCallBackDemo from './components/usecallback/usecallback.demo';
 import { PrimeReactProvider } from 'primereact/api';
 import PrimeDemo from './components/prime-demo/prime.demo';
 import Tailwind from 'primereact/passthrough/tailwind';
+import UseRefDemo from './components/useref/useref.demo';
+import UseImperativeDemo from './components/useimperative/useimprative.demo';
+import UseImperativeDemoV2 from './components/useimperative/useimprative.demo.v2';
+import CustomHookDemo from './components/customhook/custom.hook.demo';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -35,6 +39,22 @@ const router = createBrowserRouter([
 			{
 				path: 'prime-demo',
 				Component: PrimeDemo,
+			},
+			{
+				path: 'useref',
+				Component: UseRefDemo,
+			},
+			{
+				path: 'imperative',
+				Component: UseImperativeDemo,
+			},
+			{
+				path: 'imperativev2',
+				Component: UseImperativeDemoV2,
+			},
+			{
+				path: 'custom-hook',
+				Component: CustomHookDemo,
 			},
 		],
 	},
