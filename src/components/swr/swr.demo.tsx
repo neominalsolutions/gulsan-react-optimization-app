@@ -40,7 +40,7 @@ function SwrDemo() {
 		return (
 			<>
 				<div>Yüklenen: {pagedResult.data.length}</div>
-				{/* <DataTable value={pagedResult.data} tableStyle={{ minWidth: '50rem' }}>
+				<DataTable value={pagedResult.data} tableStyle={{ minWidth: '50rem' }}>
 					<Column field="ProductName" header="ProductName"></Column>
 					<Column field="UnitPrice" header="UnitPrice"></Column>
 				</DataTable>
@@ -49,7 +49,7 @@ function SwrDemo() {
 					rows={pageSize}
 					totalRecords={data?.length}
 					onPageChange={onPageChange}
-				/> */}
+				/>
 				<p className="text-right">Toplam Kayıt Sayıs: {data?.length}</p>
 			</>
 		);

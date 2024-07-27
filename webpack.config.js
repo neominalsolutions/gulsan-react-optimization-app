@@ -2,6 +2,8 @@ const path = require('path'); // COMMONJS Module System
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
+const CopyPlugin = require('copy-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = (env) => {
 	console.log('env', env);
@@ -37,8 +39,19 @@ module.exports = (env) => {
 			historyApiFallback: true,
 		},
 		output: {
-			filename: 'index.js',
+			filename: '[name].js',
 			path: path.resolve(__dirname, outDirPath),
+		},
+		optimization: {
+			minimizer: [
+				new TerserPlugin({
+					terserOptions: {
+						compress: {
+							drop_console: true,
+						},
+					},
+				}),
+			],
 		},
 		module: {
 			rules: [
@@ -75,6 +88,14 @@ module.exports = (env) => {
 			new HtmlWebpackPlugin({ template: './src/index.html' }),
 			new webpack.DefinePlugin({
 				'process.env': JSON.stringify(envVars),
+			}),
+			new CopyPlugin({
+				patterns: [
+					{
+						from: path.resolve(__dirname, 'src', 'assets'),
+						to: path.resolve(__dirname, outDirPath, 'assets'),
+					},
+				],
 			}),
 		],
 	};
