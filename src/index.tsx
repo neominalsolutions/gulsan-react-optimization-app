@@ -18,6 +18,9 @@ import UseFetchHookDemo from './components/customhook/useFetch.hook.demo';
 import SwrDemo from './components/swr/swr.demo';
 import DebouncingDemo from './components/debouncing/debouncing.demo';
 import VirtualizeListDemo from './components/virtualized-list/virtualizedlist.demo';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import ReduxThunkDemo from './components/redux/redux.thunk.demo';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -76,14 +79,20 @@ const router = createBrowserRouter([
 				path: 'virtualizedlist',
 				Component: VirtualizeListDemo,
 			},
+			{
+				path: 'redux-thunk',
+				Component: ReduxThunkDemo,
+			},
 		],
 	},
 ]);
 
 root.render(
 	<>
-		<PrimeReactProvider value={{ unstyled: true, pt: Tailwind }}>
-			<RouterProvider router={router} />
-		</PrimeReactProvider>
+		<Provider store={store}>
+			<PrimeReactProvider value={{ unstyled: true, pt: Tailwind }}>
+				<RouterProvider router={router} />
+			</PrimeReactProvider>
+		</Provider>
 	</>
 );

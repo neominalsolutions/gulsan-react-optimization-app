@@ -61,8 +61,18 @@ function App() {
 						ServerSide Searching
 					</Link>
 
-					<Link className="underline text-blue-500 mb-2 mx-2" to="/virtualizedlist">
+					<Link
+						className="underline text-blue-500 mb-2 mx-2"
+						to="/virtualizedlist"
+					>
 						Virtualized List
+					</Link>
+
+					<Link
+						className="underline text-blue-500 mb-2 mx-2"
+						to="/redux-thunk"
+					>
+						Redux Thunk
 					</Link>
 				</nav>
 			</header>
