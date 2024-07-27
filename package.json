@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack --mode production"
+    "build:prod": "webpack --env production",
+    "build:dev": "webpack --env development",
+    "build:test": "webpack --env staging"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "@types/react-dom": "^18.3.0",
     "@types/react-window": "^1.8.8",
     "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
     "jwt-decode": "^4.0.0",
     "primeicons": "^7.0.0",
     "primereact": "^10.7.0",

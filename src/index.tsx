@@ -21,6 +21,7 @@ import VirtualizeListDemo from './components/virtualized-list/virtualizedlist.de
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import ReduxThunkDemo from './components/redux/redux.thunk.demo';
+import EnvDemo from './components/envdemo/env.demo';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
 			{
 				path: 'redux-thunk',
 				Component: ReduxThunkDemo,
+			},
+			{
+				path: 'env-demo',
+				Component: EnvDemo,
 			},
 		],
 	},

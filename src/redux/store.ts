@@ -1,6 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { UserReducer } from './features/user.slice';
 
+console.log('ênv', process.env.NODE_ENV);
+
 export const store = configureStore({
 	reducer: {
 		userState: UserReducer,

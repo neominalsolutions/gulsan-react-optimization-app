@@ -52,15 +52,12 @@ function App() {
 					>
 						UseFetch Demo
 					</Link>
-
 					<Link className="underline text-blue-500 mb-2 mx-2" to="/swr-demo">
 						USE SWR Demo
 					</Link>
-
 					<Link className="underline text-blue-500 mb-2 mx-2" to="/debouncing">
 						ServerSide Searching
 					</Link>
-
 					<Link
 						className="underline text-blue-500 mb-2 mx-2"
 						to="/virtualizedlist"
@@ -68,11 +65,11 @@ function App() {
 						Virtualized List
 					</Link>
 
-					<Link
-						className="underline text-blue-500 mb-2 mx-2"
-						to="/redux-thunk"
-					>
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/redux-thunk">
 						Redux Thunk
+					</Link>
+					<Link className="underline text-blue-500 mb-2 mx-2" to="/env-demo">
+						ENV DEMO
 					</Link>
 				</nav>
 			</header>
